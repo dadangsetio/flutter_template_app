@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../component/component.dart';
+import '../../core/core.dart';
 import '../login/login.dart';
 
 class WelcomePage extends StatefulWidget {

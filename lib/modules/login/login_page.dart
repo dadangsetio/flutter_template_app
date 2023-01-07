@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:template_app/component/widget/button_normal.dart';
-
-import '../../component/component.dart';
+import '../../core/core.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -53,7 +51,7 @@ class _LoginPageState extends State<LoginPage> {
                   fontWeight: FontWeight.w500,
                 ),
               ),
-              Text(
+              const Text(
                 ' Sign up',
                 style: TextStyle(
                   color: AppColor.primary,
@@ -126,11 +124,11 @@ class _LoginPageState extends State<LoginPage> {
               ),
               contentPadding: const EdgeInsets.symmetric(vertical: 10, horizontal: 14),
               enabledBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: AppColor.border, width: 1),
+                borderSide: const BorderSide(color: AppColor.border, width: 1),
                 borderRadius: BorderRadius.circular(8),
               ),
               focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: AppColor.primary, width: 1),
+                borderSide: const BorderSide(color: AppColor.primary, width: 1),
                 borderRadius: BorderRadius.circular(8),
               ),
               fillColor: AppColor.primarySoft,
@@ -157,7 +155,19 @@ class _LoginPageState extends State<LoginPage> {
             ),
           ),
           // Sign In button
-          ButtonNormal(text: "Login", onPressed: (){})
+          ElevatedButton(
+            onPressed: (){},
+            child: const Text(
+              "Login",
+              style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600, fontSize: 18, fontFamily: 'poppins'),
+            ),
+            style: ElevatedButton.styleFrom(
+              padding: const EdgeInsets.symmetric(horizontal: 36, vertical: 18),
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+              elevation: 0,
+              shadowColor: Colors.transparent,
+            ),
+          )
         ],
       ),
     );
